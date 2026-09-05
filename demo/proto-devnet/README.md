@@ -117,3 +117,25 @@ cardano-cli conway genesis create-testnet-data --out-dir config --testnet-magic 
 ```
 
 Then tuned and removed unnecessary components (Byron-era and governance-related files).
+
+## Verifying forging credentials
+
+The VRF verification key registered for every pool in the Shelley genesis must
+match that pool's `vrf.skey`; otherwise the node starts but cannot forge. Before
+starting the demo, verify the prepared credentials with:
+
+```shell
+for pool in 1 2 3; do
+  pool_id=$(cardano-cli stake-pool id \
+    --cold-verification-key-file "config/pools-keys/pool${pool}/cold.vkey" \
+    --output-format hex)
+  vrf=$(jq -r '.cborHex | ltrimstr("5820")' \
+    "config/pools-keys/pool${pool}/vrf.vkey")
+  jq -e --arg pool_id "$pool_id" --arg vrf "$vrf" \
+    '.staking.pools[$pool_id].vrf == $vrf' \
+    config/genesis/shelley-genesis.json >/dev/null
+done
+```
+
+This repository provides a Leios prototype devnet, not an operational Cardano
+mainnet node or mainnet block-forging setup.

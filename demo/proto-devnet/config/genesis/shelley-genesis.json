@@ -56,7 +56,7 @@
                     },
                     "network": "Testnet"
                 },
-                "vrf": "757124837642b979540d94d3e43f81ec35d4bb8754e608d0467306ecf4168688"
+                "vrf": "ff69e9b2549ddcbc77b75b6f6e0e63a9bb5d50027330f762d65dde70d33a63da"
             },
             "901059533982d22aab41d27686024dc0f0d156cfa32b409578b54087": {
                 "cost": 0,
@@ -72,7 +72,7 @@
                     },
                     "network": "Testnet"
                 },
-                "vrf": "5d5b26f71119e1c7ae6b134d72829418f99a6f61fb71ccc5b1b75448d966ea9a"
+                "vrf": "fc3ec1dfdd19da3ceb4285ab31ee114e2620f91d03f6797dbda7ab5906affb34"
             },
             "eb8865c72876f93e07d3db55c14c03a542afa1ab8ad83065723a3204": {
                 "cost": 0,
@@ -88,7 +88,7 @@
                     },
                     "network": "Testnet"
                 },
-                "vrf": "aa68ef148b1f702c6d6be3c8ab3d39f7543396a32f122c2f0657eb0cadc531b3"
+                "vrf": "7d58e5c6c021e33b057a6c6bb28b0b7a42444a76b67a770f53017ca2c68de8f5"
             }
         },
         "stake": {
